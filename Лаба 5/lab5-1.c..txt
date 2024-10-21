@@ -1,0 +1,15 @@
+#include <stdio.h>
+//под номером 6
+unsigned int lol(unsigned int a, int k) {
+    return (a >> k) | (a << (32 - k));
+}
+
+int main() {
+    unsigned int a = 0xF1234567;  // Пример числа
+    int k = 4;  // Количество позиций для сдвига
+
+    unsigned int result = lol(a, k);
+    printf("Результат: 0x%X\n", result);
+
+    return 0;
+}
